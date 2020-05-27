@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+            <div class="rangeinput">
+                <input type="range" value="0" min="0" max="100" class="range" name="" onmousemove="range(this.value);">
+            </div>
+            <div class="image"></div>
+    </section>
+    <script>
+        function range(value){
+            document.querySelector('.image').style.width = value+'%';
+        }
+    </script>
+</body>
+</html>
