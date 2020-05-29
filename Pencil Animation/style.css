@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+    color: #232123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .stroke{
+    height: 6px;
+    width: 400px;
+    background-color: #06D46E;
+    position: relative;
+    animation: animate 5s linear infinite;
+    border-radius: 3px;
+}
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    15%{
+        width: 0;
+    }
+    50%{
+        width: 400px;
+    }
+    60%{
+        width: 400px;
+    }
+    85%{
+        width: 0;
+    }
+    100%{
+        width: 0;
+    }
+}
+.pencil{
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    background-color: #06D46E;
+    animation: pencil 5s ease-in-out infinite;
+    transform: rotate(675deg);
+    top: -85px;
+    right: -145px;
+}
+@keyframes pencil{
+    0%{
+        transform: rotate(315deg);
+        top: -85px;
+        right: -145px;
+    }
+    10%{
+        transform: rotate(315deg);
+        top: -85px;
+        right: -145px;
+    }
+    50%{
+        transform: rotate(315deg);
+        top: -85px;
+        right: -145px;
+    }
+    60%{
+        transform: rotate(495deg);
+        top: -80px;
+        right: -140px;
+    }
+    90%{
+        transform: rotate(495deg);
+        top: -80px;
+        right: -140px;
+    }
+    100%{
+        transform: rotate(675deg);
+        top: -85px;
+        right: -145px;
+    }
+}
+.pencil:before{
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    border-style: solid;
+    border-color: transparent #232123 transparent transparent;
+    border-width: 13px 30px 13px;
+}
+.pencil:after{
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    border-style: solid;
+    border-color: transparent #06D46E transparent transparent;
+    border-width: 13px 30px 13px;
+    transform: scale(.3);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.top
+{
+    position: absolute;
+    top: 0;
+    right: -25px;
+    height: 25px;
+    width: 30px;
+    background-color: #232123;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+p{
+    position: absolute;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 40px;
+}
